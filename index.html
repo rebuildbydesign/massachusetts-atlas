@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas of Disaster: Massachusetts County-Level FEMA Aid & Elected Officials</title>
+
+    <!-- MAPBOX GL JS LIBRARY (MAP RENDERING) -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
+
+    <!-- MAPBOX GEOCODER PLUGIN (SEARCH BAR) -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css"
+        rel="stylesheet">
+    <script
+        src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+
+    <!-- CUSTOM GEOCODER STYLE (OVERRIDES) -->
+    <link rel="stylesheet" href="geocoder.css" type="text/css" />
+
+    <!-- GOOGLE FONTS (POPPINS FAMILY FOR HEADINGS ETC) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME ICONS (OPTIONAL FOR UI) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <!-- MAIN STYLESHEET FOR ALL CUSTOM STYLES -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- TURF.JS FOR SPATIAL CALCULATIONS (CENTROIDS ETC) -->
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6.5.0/turf.min.js"></script>
+</head>
+
+<body>
+
+    <!-- RBD LOGO TOP LEFT -->
+    <div id="rbd-logo-container">
+        <img src="img/RBD-logo.png" alt="Rebuild by Design logo" id="rbd-logo">
+    </div>
+
+
+    <!-- MAIN TITLE BANNER (IMAGE) -->
+    <div id="title-container">
+        <img src="img/massachusetts-title.png" alt="Atlas of Accountability Title" />
+    </div>
+
+
+    <!-- MAPBOX GEOCODER SEARCH INPUT -->
+    <div id="geocoder" style="position:absolute;top:90px;left:19px;z-index:9999;width:340px;"></div>
+
+     <!-- HIGH LEVEL SUMMARY FINDINGS (STATIC PANEL) -->
+    <div id="highlevel-findings">
+        <p>
+            <strong>Since 2011, Massachusetts has received over <span class="highlight-red">$541 million</span> in federal
+                disaster assistance through <span class="highlight-red">11 major disaster declarations</span> related to
+                extreme weather.</strong>
+        </p>
+        <p>
+            Search your address above or click on a county to understand the impacts on your community, and connect with
+            your elected representatives to advocate for local investments in safer infrastructure.
+        </p>
+    </div>
+
+
+    <!-- MAIN MAP CONTAINER -->
+    <div id="map"></div>
+    <!-- CUSTOM TOOLTIP FOR MOUSEOVER INTERACTION -->
+    <div id="map-tooltip" style="display: none;"></div>
+
+    <!-- LEGEND FOR COUNTY DISASTER COUNTS -->
+    <div id="legend">
+        <div class="legend-title"># of Major Disaster Declarations</div>
+        <div class="legend-gradient">
+            <span>0</span>
+            <span>2</span>
+            <span>4</span>
+            <span>6</span>
+            <span>8</span>
+            <span>10</span>
+            <span>12+</span>
+        </div>
+        <div class="legend-outline">
+            <div class="legend-box"></div>
+            <span>County Boundaries</span>
+        </div>
+    </div>
+
+    <!-- MAIN JAVASCRIPT FILE FOR MAP FUNCTIONALITY -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>
