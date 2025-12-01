@@ -11,7 +11,7 @@ let MA_SENATE_GEOJSON = null;
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/light-v11',
-    center: [-71.8, 42.3], // CENTERED ON MASSACHUSETTS
+    center: [-71.8, 42.15], // CENTERED ON MASSACHUSETTS
     zoom: 7.6,             // Good statewide view for MA
     minZoom: 6
 });
