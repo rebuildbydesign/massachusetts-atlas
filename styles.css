@@ -269,6 +269,7 @@ html {
     }
 }
 
+
 /* HIGH-LEVEL FINDINGS PANEL STYLES */
 #highlevel-findings {
     position: absolute;
@@ -277,7 +278,7 @@ html {
     z-index: 9998;
     background: rgba(255, 255, 255, 0.84);
     box-shadow: 0 2px 12px rgba(165, 15, 21, 0.06);
-    padding: 10px 14px 9px 14px;
+padding: 25px 20px 10px 14px;
     max-width: 500px;
     width: 40vw;
     font-family: 'Arial', sans-serif;
@@ -306,6 +307,52 @@ html {
     font-size: 0.93em;
     line-height: 1.35;
 }
+
+/* CLOSE BUTTON FOR HIGH-LEVEL FINDINGS */
+#close-findings {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    color: #000;
+}
+
+#close-findings:hover {
+    color: #a50f15;
+}
+
+
+
+/* INFO BUTTON (SHOWS WHEN FINDINGS CLOSED) */
+#open-findings {
+    position: absolute;
+    top: 140px;
+    left: 19px;
+    z-index: 9998;
+    background: #ffffff;
+    border: 2px solid #000;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none; /* hidden by default */
+}
+
+#open-findings:hover {
+    background: #000;
+    color: #fff;
+}
+
+
 
 /* MOBILE RESPONSIVE HIGH-LEVEL FINDINGS */
 @media (max-width: 700px) {

@@ -52,7 +52,8 @@
     <div id="geocoder" style="position:absolute;top:90px;left:19px;z-index:9999;width:340px;"></div>
 
      <!-- HIGH LEVEL SUMMARY FINDINGS (STATIC PANEL) -->
-    <div id="highlevel-findings">
+<div id="highlevel-findings">
+    <button id="close-findings" aria-label="Close">&times;</button>
         <p>
             <strong>Since 2011, Massachusetts has received over <span class="highlight-red">$541 million</span> in federal
                 disaster assistance through <span class="highlight-red">11 major disaster declarations</span> related to
@@ -64,6 +65,9 @@
         </p>
     </div>
 
+
+<!-- INFO BUTTON (HIDDEN BY DEFAULT) -->
+<button id="open-findings" aria-label="Information">i</button>
 
     <!-- MAIN MAP CONTAINER -->
     <div id="map"></div>
